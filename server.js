@@ -7,6 +7,8 @@ app.get('/', (req, res) => {
     res.send("Welcome to Trustybytes server");
 });
 
+app.use('/api/vault', require("./routes/api/vault"))
+
 app.listen(port, () => {
     console.log(`server running on the port ${port} `)
 })
